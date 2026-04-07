@@ -23,4 +23,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: mydocker386/my-app-from-github-action:v1.0.0
+          #tags: ${{ secrets.DOCKER_USERNAME }}/my-app-from-github-action:v1.0.0
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-app-from-github-action:${{ github.sha }},${{ secrets.DOCKER_USERNAME }}/express-app:latest
