@@ -1,10 +1,15 @@
 # github action workflow to build
 #push docker image on push to main
 name: Build and Push Docker Image
+
+#add trigger manually to run the workflow
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+      
 jobs:
   build-and-push: 
     runs-on: ubuntu-latest
